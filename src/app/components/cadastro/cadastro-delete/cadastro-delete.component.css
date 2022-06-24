@@ -1,0 +1,13 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.salvar {
+  color: #e79a35;
+}
+
+.cancelar {
+  color: red;
+  margin: 15px;
+}

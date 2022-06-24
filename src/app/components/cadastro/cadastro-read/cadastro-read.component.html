@@ -1,0 +1,45 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]='cadastros'>
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef ><b><i>Id</i></b></th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <!-- Nome Column -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef ><b><i>Nome</i></b></th>
+      <td mat-cell *matCellDef="let row">{{row.nome}}</td>
+    </ng-container>
+
+    <!-- Profissão Column -->
+    <ng-container matColumnDef="profissao">
+      <th mat-header-cell *matHeaderCellDef ><b><i>Profissão</i></b></th>
+      <td mat-cell *matCellDef="let row">{{row.profissao}}</td>
+    </ng-container>
+
+    <!-- Salario Column -->
+    <ng-container matColumnDef="salario">
+      <th mat-header-cell *matHeaderCellDef ><b><i>Salário</i></b></th>
+      <td mat-cell *matCellDef="let row">{{row.salario | currency: 'BRL'}}</td>
+    </ng-container>
+
+    <!-- Ações Column -->
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef ><b><i>Ações</i></b></th>
+      <td mat-cell *matCellDef="let row">
+        <a routerLink="/cadastros/update/{{row.id}}" class="edit">
+          <i class="material-icons">edit</i>
+        </a>
+
+        <a routerLink="/cadastros/delete/{{row.id}}" class="delete">
+          <i class="material-icons">delete</i>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</div>

@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>Novo Funcionário</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="cadastro.nome" name="nome">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Profissão" [(ngModel)]="cadastro.profissao" name="profissao">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Salario (R$)" [(ngModel)]="cadastro.salario" name="salario">
+    </mat-form-field>
+
+  </form>
+  <button class="salvar" mat-raised-button (click)="createCadastro()">Salvar</button>
+  <button class="cancelar" mat-raised-button (click)="cancelaCadastro()">Cancelar</button>
+</mat-card>
+

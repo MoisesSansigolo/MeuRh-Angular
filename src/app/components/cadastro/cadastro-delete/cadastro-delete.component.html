@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-title>Excluir Funcionário</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [value]="cadastro.nome" name="nome" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Profissão" [value]="cadastro.profissao" name="profissao" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Salario (R$)" [value]="cadastro.salario" name="salario" disabled>
+    </mat-form-field>
+
+  </form>
+  <button class="salvar" mat-raised-button (click)="deleteCadastro()">Excluir</button>
+  <button class="cancelar" mat-raised-button (click)="cancela()">Cancelar</button>
+</mat-card>
+
+

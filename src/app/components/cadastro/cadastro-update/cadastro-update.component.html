@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-title>Atualizar Funcionário</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="cadastro.nome" name="nome">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Profissão" [(ngModel)]="cadastro.profissao" name="profissao">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Salario (R$)" [(ngModel)]="cadastro.salario" name="salario">
+    </mat-form-field>
+
+  </form>
+  <button class="salvar" mat-raised-button (click)="updateCadastro()">Atualizar</button>
+  <button class="cancelar" mat-raised-button (click)="cancela()">Cancelar</button>
+</mat-card>
+
+
